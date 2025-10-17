@@ -83,7 +83,7 @@ export default class View {
             showBigBlinds: showBBsRect,
             searchHand: searchHandRect,
             clearHandFilter: clearRect,
-            shareHand: shareHandRect,
+            // shareHand: shareHandRect,
             fullWindowed: fullWindowedRect
 
         } = embeddedRects;
@@ -102,7 +102,7 @@ export default class View {
 
         this.handsList = new HandsList(this, handsListRect);
 
-        const showBBsText = 'Show Stack Values in Big Blinds';
+        const showBBsText = 'stacks in BBs';
         this.showBigBlinds = new CheckBox(this, showBBsRect, showBBsText);
 
         const hiddenNot3d = { state: buttonStates.hidden, is3d: false };
@@ -111,7 +111,7 @@ export default class View {
 
         this.clearHandsFilter = new Button(this, clearRect, hiddenNot3d);
 
-        this.shareHand = new Button(this, shareHandRect, { state: buttonStates.hidden });
+        // this.shareHand = new Button(this, shareHandRect, { state: buttonStates.hidden });
 
         this.fullWindowed = new Button(this, fullWindowedRect);
     }
@@ -138,7 +138,7 @@ export default class View {
 
         await this.searchHand.setImages(this.images.searchHand, { row: 0 });
         await this.clearHandsFilter.setImages(this.images.clearHandFilter, { row: 0 });
-        await this.shareHand.setImages(this.images.openShareButtons, { row: 1 });
+        // await this.shareHand.setImages(this.images.openShareButtons, { row: 1 });
 
         await this.fullWindowed.setImages(this.images.fullWindowed, { row: 0 });
 
@@ -171,7 +171,7 @@ export default class View {
         this.showBigBlinds.bind(handlers.showBigBlinds);
         this.searchHand.bind(handlers.searchHand);
         this.clearHandsFilter.bind(handlers.clearHandsFilter);
-        this.shareHand.bind(handlers.shareHand);
+        // this.shareHand.bind(handlers.shareHand);
         this.fullWindowed.bind(handlers.fullWindowed);
     }
 
@@ -183,7 +183,7 @@ export default class View {
             this.chat.clearHover();
             this.searchHand.clearHover();
             this.clearHandsFilter.clearHover();
-            this.shareHand.clearHover();
+            // this.shareHand.clearHover();
             this.fullWindowed.clearHover();
         });
 
@@ -401,14 +401,14 @@ export default class View {
 
     enableShareHand({ fromDB } = {}) {
 
-        if (fns.isMobile() || fromDB) return;
+        // if (fns.isMobile() || fromDB) return;
 
-        this.shareHand.setState = buttonStates.normal;
+        // this.shareHand.setState = buttonStates.normal;
     }
 
     disableShareHand() {
 
-        this.shareHand.setState = buttonStates.hidden;
+        // this.shareHand.setState = buttonStates.hidden;
     }
 
     toogleNavigationKeysSize() {

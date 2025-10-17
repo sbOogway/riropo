@@ -10,8 +10,8 @@ export const poweredBy = function ({ fromView } = {}) {
 
     this.context.font = '14px Arial';
 
-    const textLight = 'Winning Poker HUD';
-    const textDark = 'Powered by';
+    const textLight = '';
+    const textDark = '';
 
     const textLightWidth = this.context.measureText(textLight).width;
 
