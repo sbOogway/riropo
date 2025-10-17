@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test-last": "node ./test-last/index.js"
+    "test-last": "node ./test-last/index.js",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -27,6 +28,7 @@
     "canvas": "^2.6.1",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "gh-pages": "^6.3.0",
     "jsdom": "^16.5.1",
     "jsdom-global": "^3.0.2",
     "mocha": "^8.3.2",
